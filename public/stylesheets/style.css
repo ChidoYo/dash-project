@@ -3,3 +3,33 @@
     margin-right: 1rem;
     padding: 2rem 0;
 }
+
+/* Media Nav Styles */
+.media-insert {
+    background-color: #333;
+    /*height: 4rem;*/
+    padding: 0.5rem;
+}
+
+.media-insert .form-item {
+    display: inline-block;
+    width: 33.333%;
+    padding: 0.2rem;
+}
+
+.media-insert input, .media-insert select {
+    height: 30px;
+    font-size: 12px;
+    margin: 0.2rem 0;
+}
+
+.media-insert .button {
+    margin-bottom: 0;
+    padding: 0.5rem 0.4rem;
+    margin-top: 0.17rem;
+}
+
+/* Button Style Override */
+.button {
+    border-radius: 3px;
+}
