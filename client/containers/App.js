@@ -8,7 +8,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.jQuery('.button-collapse').sideNav();
+    // window.jQuery('.button-collapse').sideNav();
   }
 
   links() {
