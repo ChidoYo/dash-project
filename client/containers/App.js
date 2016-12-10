@@ -1,16 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router';
+import MediaInsert from '../components/MediaInsert';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.links = this.links.bind(this);
+    this.addMedia = this.addMedia.bind(this);
+  }
+
+  addMedia(e) {
+      e.preventDefault();
+      console.log('Ouch!');
+      window.jQuery('.media-insert').toggleClass('show');
+
+  //     $( "#book" ).animate({
+  //   opacity: 0.25,
+  //   left: "+=50",
+  //   height: "toggle"
+  // }, 5000, function() {
+  //   // Animation complete.
+  // });
   }
 
   componentDidMount() {
     // window.jQuery('.button-collapse').sideNav();
-    var element = ReactDOM.findDOMNode(this.refs.test);
-    element.setAttribute('custom-attribute', 'some value');
   }
 
   links() {
@@ -39,34 +53,11 @@ class App extends React.Component {
           </div>
           <div className="top-bar-right">
               <ul className="menu">
-                  <li class="add-media"><a href="#">Add Media</a></li>
+                  <li className="add-media"><a href="#" onClick={this.addMedia}>Add Media</a></li>
               </ul>
           </div>
         </nav>
-        <section className="media-insert">
-            <form>
-                <div className="row">
-                    <div className="columns large-4">
-                        <input type="text" ref="title" placeholder="Title" />
-                    </div>
-                    <div className="columns large-4">
-                        <input type="text" ref="title" placeholder="Title" />
-                    </div>
-                    <div className="columns large-3">
-                        <select>
-                            <option>Bookmarks</option>
-                            <option>Videos</option>
-                            <option>Music</option>
-                            <option>Podcasts</option>
-                            <option>Images/GIFs</option>
-                        </select>
-                    </div>
-                    <div className="columns large-1">
-                        <a href="#" className="button warning small">Do it!</a>
-                    </div>
-                </div>
-            </form>
-        </section>
+        <MediaInsert />
         {this.props.children}
       </div>
     )

@@ -5,6 +5,8 @@
 }
 
 nav.top-bar {
+    position: relative;
+    z-index: 10;
     color: white;
     background-color: #AA4839
 }
@@ -37,8 +39,16 @@ nav.top-bar {
 /* Media Nav Styles */
 .media-insert {
     background-color: #333;
-    /*height: 4rem;*/
     padding: 0.5rem;
+    position: relative;
+    z-index: 9;
+    top: -52px;
+    transition: 0.15s ease-in-out;
+}
+
+.media-insert.show {
+    top: 0;
+    transition: 0.15s ease-in-out;
 }
 
 .media-insert .form-item {
