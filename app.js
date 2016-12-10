@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 mongoose.connect( 'mongodb://localhost/kolaches_dashboard' );
 
 var routes = require('./routes/index');
+var media = require('./routes/media');
 
 var app = express();
 
@@ -35,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //PUT API ROUTES HERE vvv
 //
-//app.use('/api/foo', foo);
+app.use('/api/media', media);
 //
 //PUT API ROUTES HERE ^^^^
 

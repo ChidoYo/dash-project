@@ -1,28 +1,26 @@
-var express = require('express');
-var router = express.Router();
-var mongoose = require ('mongoose');
-var Media = require('../models/media');
+'use strict';
 
-router.post('/', function (req, res) {
-    var title = req.body.title;
-    var url = req.body.url;
-    var directory = req.body.directory;
+const express = require('express');
+const router = express.Router();
+const mongoose = require ('mongoose');
+const Medium = require('../models/medium');
 
-    new Media({
-      title: title,
-      url: url,
-      directory: directory,
-
-    }).save( function(media) {
-    res.redirect("/media")
-    })
-});
-
-
-router.get('/', function(req, res, next) {
-  console.log('IN PROFILES');
-  Media.find( function(err, media) {
-    console.log(err)
-    res.render('media', { media: media });
+router.get('/', (req, res, next) => {
+  Medium.find( (err, media) => {
+    res.json(media);
   });
 });
+
+
+router.post('/', (req, res) => {
+  let { title, url, directory } = req.body;
+    new Medium({
+      title,
+      url,
+      directory
+    }).save( (err, medium) => {
+    res.json(medium)
+  });
+});
+
+module.exports = router;
