@@ -6,6 +6,32 @@ class App extends React.Component {
     super(props);
     this.links = this.links.bind(this);
   }
+    handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Toggle />,
+  document.getElementById('root')
+);
+
+  class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClick = this.handleClick.bind(this);
+  }
 
   /*componentDidMount() {
     window.jQuery('.button-collapse').sideNav();
@@ -13,11 +39,11 @@ class App extends React.Component {
 
   links() {
     let navs = [
-      {path: '/', text: 'Bookmarks'},
-      {path: '/videos', text: 'Videos'},
-      {path: '/music', text: 'Music'},
-      {path: '/podcasts', text: 'Podcasts'},
-      {path: '/images', text: 'Images/GIFs'}
+      {path: '/', text: 'Bookmarks', id:'Bookmarks'},
+      {path: '/videos', text: 'Videos', id:'Videos' },
+      {path: '/music', text: 'Music', id: 'Music'},
+      {path: '/podcasts', text: 'Podcasts', id: 'Podcasts'},
+      {path: '/images', text: 'Images/GIFs', id: 'Images'}
     ]
 
     return navs.map( (nav, i) => {
@@ -41,5 +67,12 @@ class App extends React.Component {
     )
   }
 };
+
+handleClick() {
+  render()
+    return(
+
+    )
+}
 
 export default App;
