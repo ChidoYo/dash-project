@@ -4,6 +4,36 @@
     padding: 2rem 0;
 }
 
+nav.top-bar {
+    color: white;
+    background-color: #AA4839
+}
+
+.menu li:first-child > a {
+    color: white;
+    background-color: #AA4839;
+}
+
+.menu li:nth-child(2) > a {
+    color: white;
+    background-color: #265B6A;
+}
+
+.menu li:nth-child(3) > a {
+    color: white;
+    background-color: #AA7239;
+}
+
+.menu li:nth-child(4) > a {
+    color: white;
+    background-color: #2A7E43;
+}
+
+.menu li:last-child > a {
+    color: white;
+    background-color: #D4786A;
+}
+
 /* Media Nav Styles */
 .media-insert {
     background-color: #333;

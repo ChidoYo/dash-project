@@ -15,11 +15,11 @@ class App extends React.Component {
 
   links() {
     let navs = [
-      {path: '/', text: 'Bookmarks'},
-      {path: '/videos', text: 'Videos'},
-      {path: '/music', text: 'Music'},
-      {path: '/podcasts', text: 'Podcasts'},
-      {path: '/images', text: 'Images/GIFs'}
+      {path: '/', text: 'Bookmarks', id:'Bookmarks'},
+      {path: '/videos', text: 'Videos', id:'Videos' },
+      {path: '/music', text: 'Music', id: 'Music'},
+      {path: '/podcasts', text: 'Podcasts', id: 'Podcasts'},
+      {path: '/images', text: 'Images/GIFs', id: 'Images'}
     ]
 
     return navs.map( (nav, i) => {
@@ -71,6 +71,7 @@ class App extends React.Component {
       </div>
     )
   }
+
 };
 
 export default App;
