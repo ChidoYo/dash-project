@@ -7,14 +7,17 @@ class App extends React.Component {
     this.links = this.links.bind(this);
   }
 
-  componentDidMount() {
+  /*componentDidMount() {
     window.jQuery('.button-collapse').sideNav();
-  }
+  }*/
 
   links() {
     let navs = [
-      {path: '/', text: 'Home'},
-      {path: '/general', text: 'General'}
+      {path: '/', text: 'Bookmarks'},
+      {path: '/videos', text: 'Videos'},
+      {path: '/music', text: 'Music'},
+      {path: '/podcasts', text: 'Podcasts'},
+      {path: '/images', text: 'Images/GIFs'}
     ]
 
     return navs.map( (nav, i) => {
@@ -27,7 +30,7 @@ class App extends React.Component {
     return (
       <div>
         <nav className="top-bar">
-          <div className="top-bar-right">
+          <div className="top-bar-left">
             <ul className="menu">
               {this.links()}
             </ul>
