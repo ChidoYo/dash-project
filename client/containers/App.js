@@ -13,7 +13,8 @@ class App extends React.Component {
 
   links() {
     let navs = [
-      {path: '/', text: 'Home'}
+      {path: '/', text: 'Home'},
+      {path: '/general', text: 'General'}
     ]
 
     return navs.map( (nav, i) => {
