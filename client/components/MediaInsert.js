@@ -47,12 +47,10 @@ class MediaInsert extends React.Component {
                       <button className="button warning small" type="submit">Do it!</button>
                   </div>
               </div>
-          </form>
-      </section>
-
+            </form>
+          </section>
         )
     }
-
 }
 
 export default MediaInsert;

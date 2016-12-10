@@ -11,16 +11,7 @@ class App extends React.Component {
 
   addMedia(e) {
       e.preventDefault();
-      console.log('Ouch!');
       window.jQuery('.media-insert').toggleClass('show');
-
-  //     $( "#book" ).animate({
-  //   opacity: 0.25,
-  //   left: "+=50",
-  //   height: "toggle"
-  // }, 5000, function() {
-  //   // Animation complete.
-  // });
   }
 
   componentDidMount() {
