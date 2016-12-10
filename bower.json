@@ -17,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "Materialize": "materialize#^0.97.5",
-    "moment": "^2.11.2"
+    "moment": "^2.11.2",
+    "foundation-sites": "^6.2.4"
   }
 }
