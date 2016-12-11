@@ -39,7 +39,7 @@ render() {
         <h3>Videos</h3>
         <p>Here are your videos</p>
         <table>
-         <thead class='center' direc>
+         <thead className='center' direc>
             <th>Title</th>
             <th>URL</th>
          </thead>

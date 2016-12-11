@@ -39,7 +39,7 @@ render() {
         <h3>Imagess</h3>
         <p>Here are your Images</p>
         <table>
-         <thead class='center'>
+         <thead className='center'>
             <th>Title</th>
             <th>URL</th>
          </thead>

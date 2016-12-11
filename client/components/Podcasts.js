@@ -38,7 +38,7 @@ render() {
         <h3>Podcasts</h3>
         <p>Here are your podcasts</p>
         <table>
-         <thead class='center'>
+         <thead className='center'>
             <th>Title</th>
             <th>URL</th>
          </thead>
