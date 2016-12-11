@@ -39,8 +39,10 @@ render() {
         <p>Here is your music</p>
         <table>
          <thead className='center'>
-            <th>Title</th>
-            <th>URL</th>
+             <tr>
+                 <th>Title</th>
+                 <th>URL</th>
+             </tr>
          </thead>
          <tbody>
           {media}

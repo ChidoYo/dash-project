@@ -39,9 +39,11 @@ render() {
         <h3>Videos</h3>
         <p>Here are your videos</p>
         <table>
-         <thead className='center' direc>
-            <th>Title</th>
-            <th>URL</th>
+         <thead className='center'>
+             <tr>
+                 <th>Title</th>
+                 <th>URL</th>
+             </tr>
          </thead>
          <tbody>
           {media}
