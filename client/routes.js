@@ -11,7 +11,7 @@ import Images from './components/Images'
 export default (
   <Route>
     <Route path="/" component={App}>
-      { /*<IndexRoute component={Home} /> */}
+      <Route path="/Bookmarks" component={Bookmarks} />
       <Route path="/videos" component={Videos} />
       <Route path="/music" component={Music} />
       <Route path="/podcasts" component={Podcasts} />

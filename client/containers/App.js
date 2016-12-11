@@ -20,7 +20,7 @@ class App extends React.Component {
 
   links() {
     let navs = [
-      {path: '/', text: 'Bookmarks', id:'Bookmarks'},
+      {path: '/Bookmarks', text: 'Bookmarks', id:'Bookmarks'},
       {path: '/videos', text: 'Videos', id:'Videos' },
       {path: '/music', text: 'Music', id: 'Music'},
       {path: '/podcasts', text: 'Podcasts', id: 'Podcasts'},
