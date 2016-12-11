@@ -23,4 +23,11 @@ router.post('/', (req, res) => {
   });
 });
 
+router.delete('/:id', (req, res) => {
+  Medium.findById(req.params.id, (err, medium) => {
+    medium.remove();
+    res.status(200).send({success: true});
+  });
+});
+
 module.exports = router;
