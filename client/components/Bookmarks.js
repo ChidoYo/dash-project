@@ -25,9 +25,10 @@ render() {
 
   let media = filteredMedia.map( medium => {
     return (
-      <li key={medium._id}>
-      {medium.title} {medium.directory}
-      </li>
+      <tr key={medium._id}>
+       <td> {medium.title} </td>
+       <td> <a href={medium.url} target="_blank">{medium.url}</a> </td>
+      </tr>
 
       )
     });
@@ -37,13 +38,26 @@ render() {
       <div className="container">
         <h3>Bookmarks</h3>
         <p>Here are your bookmarks</p>
-        <ul>
+        <table>
+         <thead class='center' direc>
+            <th>Title</th>
+            <th>URL</th>
+         </thead>
+         <tbody>
           {media}
-        </ul>
+        </tbody>
+      </table>
       </div>
     )
   }
 }
+const Bookmark = () => (
+ <div className="container">
+   <h3>Bookmarks</h3>
+   <p>Here are your bookmarks</p>
+ </div>
+)
+
 
 
 export default Bookmarks;
