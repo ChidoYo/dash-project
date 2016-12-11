@@ -43,12 +43,12 @@ nav.top-bar {
     position: relative;
     z-index: 9;
     top: -52px;
-    transition: 0.15s ease-in-out;
+    transition: 0.15s ease-out;
 }
 
 .media-insert.show {
     top: 0;
-    transition: 0.15s ease-in-out;
+    transition: 0.15s ease-in;
 }
 
 .media-insert .form-item {
